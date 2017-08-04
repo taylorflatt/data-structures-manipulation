@@ -15,4 +15,11 @@ namespace c_sharp_trees
         public Tree(int val) {
             root = new Node(val);
         }
+
+        public void Insert(int val) {
+            if (root == null) 
+                root = new Node(val);
+            else
+                root.Insert(val);
+        }
 }
