@@ -30,4 +30,25 @@ namespace c_sharp_trees
                 return root.Find(val);
         }
 
+        public void preorder() {
+            if (root != null) {
+                Console.WriteLine("Preorder:");
+                root.preorder();
+            }
+        }
+
+        public void postorder() {
+            if (root != null) {
+                Console.WriteLine("Postorder:");
+                root.postorder();
+            }
+        }
+
+        public void inorder() {
+            if (root != null) {
+                Console.WriteLine("Inorder:");
+                root.inorder();
+            }
+        }
+    }
 }
