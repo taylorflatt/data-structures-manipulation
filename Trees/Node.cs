@@ -34,4 +34,19 @@ namespace c_sharp_trees
                 }
             }
         }
+
+        public bool Find(int val) {
+            if(this == null)
+                return false;
+            else{
+                if(val == this.data)
+                    return true;
+                else if(val < this.data && this.left != null)
+                    return left.Find(val);
+                else if(val > this.data && this.right != null)
+                    return right.Find(val);
+            }
+
+            return false;
+        }
 }
