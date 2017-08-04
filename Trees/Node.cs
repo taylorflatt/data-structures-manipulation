@@ -49,4 +49,36 @@ namespace c_sharp_trees
 
             return false;
         }
+
+        public void preorder() {
+            if(this != null) {
+                Console.Write(this.data + " ");
+                if(this.left != null)
+                    this.left.preorder();
+                else if(this.right != null)
+                    this.right.preorder();
+            }
+        }
+
+        public void postorder() {
+            if(this != null) {
+                if(this.left != null)
+                    this.left.postorder();
+                else if(this.right != null)
+                    this.right.postorder();
+                Console.Write(this.data + " ");
+            }
+        }
+
+        public void inorder() {
+            if(this != null) {
+                
+                if(this.left != null)
+                    this.left.inorder();
+                Console.Write(this.data + " ");
+                if(this.right != null)
+                    this.right.inorder();
+            }
+        }
+    }
 }
