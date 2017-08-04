@@ -22,4 +22,12 @@ namespace c_sharp_trees
             else
                 root.Insert(val);
         }
+
+        public bool Find(int val) {
+            if(root == null)
+                return false;
+            else
+                return root.Find(val);
+        }
+
 }
