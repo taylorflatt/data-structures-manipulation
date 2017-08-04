@@ -16,4 +16,22 @@ namespace c_sharp_trees
             left = null;
             right = null;
         }
+
+        public void Insert(int val) {
+            if (this == null) {
+                this.data = val;
+            } else {
+                if(val < this.data) {
+                    if(this.left == null)
+                        this.left = new Node(val);
+                    else
+                        this.left.Insert(val);
+                } else if(val > this.data) {
+                    if(this.right == null)
+                        this.right = new Node(val);
+                    else
+                        this.right.Insert(val);
+                }
+            }
+        }
 }
